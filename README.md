@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# InstaCode Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+InstaCode is a simple web-based application that allows users to generate code snippets using AI. This repository contains the frontend built with React.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Input text prompt to generate code
+- Display generated code with a copy button
+- Handles slower response times and displays a warning
+- Responsive design with a dark theme
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the frontend locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+   ```sh
+   git clone https://github.com/omarsherif06/instacode-frontend.git
+   cd instacode-frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Install dependencies:
+   ```
 
-### `npm run build`
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app will be available at http://localhost:3000/.
+Configuration
 
-### `npm run eject`
+Ensure that the backend API is running and update the fetch request URL in App.js if needed:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+const response = await fetch("https://omarsherif06.pythonanywhere.com/generate", {
+method: "POST",
+body: input,
+});
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To build the project for production, run:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm run build
 
-## Learn More
+This will generate an optimized build in the build/ directory, which can be deployed to services like Vercel, Netlify, or GitHub Pages.
+Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    JavaScript (ES6+)
 
-### Code Splitting
+    CSS (responsive design)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+License
 
-### Analyzing the Bundle Size
+This project is open-source and available under the MIT License.
+Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Developed by Omar Sherif.
+Contributing
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to submit issues or pull requests to improve the project!
